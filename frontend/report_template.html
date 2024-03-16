@@ -147,23 +147,6 @@
       top: 11.31%;
       font-size: 1.5vw;
     }
-    .gwd-button-120e {
-      position: absolute;
-      border-image-source: none;
-      border-image-width: 1;
-      border-image-outset: 0;
-      border-image-repeat: stretch;
-      border-color: transparent;
-      background-image: none;
-      border-radius: 22px;
-      color: rgb(197, 197, 194);
-      background-color: transparent;
-      width: 9%;
-      height: 4.56%;
-      left: 71.04%;
-      top: 11.6%;
-      font-size: 1.5vw;
-    }
     .gwd-div-1a2t {
       position: absolute;
       background-color: rgb(45, 45, 110);
@@ -260,6 +243,30 @@
       justify-content: center;
       color: rgb(245, 168, 54);
     }
+    .gwd-image-1vs1 {
+      position: absolute;
+      width: 5%;
+      height: 12.11%;
+      left: 83.46%;
+      top: 7.57%;
+    }
+    .gwd-button-o4yv {
+      position: absolute;
+      border-image-source: none;
+      border-image-width: 1;
+      border-image-outset: 0;
+      border-image-repeat: stretch;
+      border-color: transparent;
+      background-image: none;
+      border-radius: 22px;
+      color: rgb(197, 197, 194);
+      background-color: transparent;
+      width: 9%;
+      height: 4.56%;
+      left: 71.04%;
+      top: 11.6%;
+      font-size: 1.5vw;
+    }
   </style>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
   <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
@@ -274,6 +281,12 @@
     gwd.print_report = function(event) {
       window.print();
     };
+    gwd.goto_about_page = function(event) {
+      document.location.href = "about_page.html";
+    };
+    gwd.goto_change_pwd = function(event) {
+      document.location.href = "change_pwd_page.html";
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -282,11 +295,15 @@
       gwd.actions.events.addHandler('button_27', 'click', gwd.goto_home_page, false);
       gwd.actions.events.addHandler('button_8', 'click', gwd.goto_orders_page, false);
       gwd.actions.events.addHandler('button_20', 'click', gwd.print_report, false);
+      gwd.actions.events.addHandler('logo_scope_4', 'click', gwd.goto_change_pwd, false);
+      gwd.actions.events.addHandler('button_23', 'click', gwd.goto_about_page, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('button_27', 'click', gwd.goto_home_page, false);
       gwd.actions.events.removeHandler('button_8', 'click', gwd.goto_orders_page, false);
       gwd.actions.events.removeHandler('button_20', 'click', gwd.print_report, false);
+      gwd.actions.events.removeHandler('logo_scope_4', 'click', gwd.goto_change_pwd, false);
+      gwd.actions.events.removeHandler('button_23', 'click', gwd.goto_about_page, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -305,10 +322,11 @@
   <gwd-image id="green-word-bubble" source="assets/green-word-bubble.PNG" scaling="none" class="gwd-image-1gc6"></gwd-image>
   <button id="button_27" class="gwd-button-1rx8">Home</button>
   <button id="button_8" class="gwd-button-pq6m gwd-button-1lfr">Orders</button>
-  <button id="button_23" class="gwd-button-120e">About</button>
   <div class="gwd-div-1a2t"><span class="gwd-span-me26">Accommodation</span>
     <button id="button_17" class="gwd-button-1abi">&lt;</button>
     <button id="button_28" class="gwd-button-g666">&gt;</button><span class="gwd-span-fwg8"><br></span><span class="gwd-span-it84"><br></span></div>
+  <gwd-image id="logo_scope_4" source="assets/usricon.png" scaling="contain" class="gwd-image-1vs1"></gwd-image>
+  <button id="button_23" class="gwd-button-o4yv">About</button>
 </body>
 
 </html>

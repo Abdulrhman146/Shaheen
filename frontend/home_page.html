@@ -68,8 +68,8 @@
       border-radius: 2vw;
     }
     .gwd-svg-pvtu {
-      top: 8.46%;
       left: 6.53%;
+      top: 8.46%;
     }
     .gwd-image-vz8t {
       position: absolute;
@@ -135,9 +135,9 @@
       background-color: transparent;
       width: 9%;
       height: 4.56%;
-      top: 11.93%;
       font-size: 1.5vw;
-      left: 58.79%;
+      left: 58.73%;
+      top: 11.76%;
     }
     .gwd-input-1dze {
       position: absolute;
@@ -198,6 +198,13 @@
       width: 22%;
       height: 31.58%;
     }
+    .gwd-image-q67a {
+      position: absolute;
+      width: 5%;
+      height: 12.11%;
+      left: 83.46%;
+      top: 7.57%;
+    }
   </style>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
   <script data-source="gwdimage_min.js" data-version="17" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
@@ -210,6 +217,12 @@
     gwd.goto_home_page = function(event) {
       document.location.href = "home_page.html";
     };
+    gwd.goto_about_page = function(event) {
+      document.location.href = "about_page.html";
+    };
+    gwd.goto_change_pwd = function(event) {
+      document.location.href = "change_pwd_page.html";
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -217,10 +230,14 @@
     gwd.actions.events.registerEventHandlers = function(event) {
       gwd.actions.events.addHandler('button_25', 'click', gwd.goto_orders_page, false);
       gwd.actions.events.addHandler('button_24', 'click', gwd.goto_home_page, false);
+      gwd.actions.events.addHandler('button_23', 'click', gwd.goto_about_page, false);
+      gwd.actions.events.addHandler('logo_scope_4', 'click', gwd.goto_change_pwd, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('button_25', 'click', gwd.goto_orders_page, false);
       gwd.actions.events.removeHandler('button_24', 'click', gwd.goto_home_page, false);
+      gwd.actions.events.removeHandler('button_23', 'click', gwd.goto_about_page, false);
+      gwd.actions.events.removeHandler('logo_scope_4', 'click', gwd.goto_change_pwd, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -238,6 +255,7 @@
   <gwd-image source="assets/0a5b883af4c94ae12330075f427c073f-world-map-icon-by-vexels.png" scaling="contain" id="0a5b883af4c94ae12330075f427c073f-world-map-icon-by-vexels" class="gwd-image-1tto gwd-image-16qa"></gwd-image>
   <button id="button_23" class="gwd-button-120y">About</button>
   <gwd-image source="assets/IMG_8900.PNG" scaling="contain" id="IMG_8900_2" class="gwd-image-92ak gwd-image-1bn3"></gwd-image>
+  <gwd-image id="logo_scope_4" source="assets/usricon.png" scaling="contain" class="gwd-image-q67a"></gwd-image>
 </body>
 
 </html>
